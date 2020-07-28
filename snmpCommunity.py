@@ -1,7 +1,6 @@
 import datetime
 import time
 import wexpect
-import pprint
 import getpass
 import openpyxl
 import parse
