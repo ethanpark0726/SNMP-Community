@@ -82,7 +82,7 @@ def accessJumpBox(username, password):
 
     print('\n--- Attempting connection to ' + 'IS6 Server... ')
     ssh_newkey = 'Are you sure you want to continue connecting'
-    session = wexpect.spawn('ssh ' + username + '@is6.hsnet.ufl.edu')
+    session = wexpect.spawn('ssh ' + username + '@yourServerIP')
 
     idx = session.expect([ssh_newkey, 'word', wexpect.EOF])
 
@@ -186,14 +186,14 @@ def commandExecute(session, os):
 
 if __name__ == '__main__':
 
-    cellNumber = 968
+    cellNumber = 5
     print()
     print('+-------------------------------------------------------------+')
-    print('|    Cisco L2 switches SNMP Location Gathernig tool...        |')
+    print('|    Cisco L2 switches SNMP Community Gathernig tool...       |')
     print('|    Version 1.0.0                                            |')
     print('|    Compatible with C35xx, C37xx, C38xx, C65XX               |')
     print('|    Nexus 5K, 7K, 9K                                         |')
-    print('|    Scripted by Ethan Park, May. 2020                        |')
+    print('|    Scripted by Ethan Park, June. 2020                       |')
     print('+-------------------------------------------------------------+')
     print()
     username = input("Enter your admin ID ==> ")
@@ -201,7 +201,7 @@ if __name__ == '__main__':
     print()
 
     switchList = getDeviceList()
-    #createExcelFile()
+    createExcelFile()
 
     for elem in switchList:
         
