@@ -1,1 +1,1 @@
-﻿# Creating an Excel report of SNMP community
+# Creating an Excel report of SNMP community
